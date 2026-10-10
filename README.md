@@ -25,6 +25,8 @@ I'm a **Systems Administrator in the UK** who looks after Windows and Linux infr
 
 I like making systems faster, more reliable and easier to run, and writing clear guides so others can do the same. The projects below are a good sample of how I work.
 
+> 💼 **Open to Systems Administrator and Infrastructure roles in the UK.** Get in touch on [LinkedIn](https://www.linkedin.com/in/michael-vickers-7a30b3164/).
+
 ---
 
 ## 🚀 Featured Projects
@@ -151,18 +153,6 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 </a>
 <br>Nginx
 </td>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="MySQL" width="65" height="65" />
-</a>
-<br>MySQL
-</td>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/raspberrypi-icon.svg" alt="Raspberry Pi" width="65" height="65" />
-</a>
-<br>Raspberry Pi
-</td>
 </tr>
 </table>
 
@@ -189,11 +179,6 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 <div align="center">
 
 ## 📊 GitHub Activity
-
-<img src="https://github-readme-stats.vercel.app/api?username=mxioi&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mxioi&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=6" height="165" />
-
-<br/><br/>
 
 <img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" />
 
