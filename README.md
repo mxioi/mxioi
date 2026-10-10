@@ -14,8 +14,6 @@
 
 </div>
 
-## 👋 About Me
-
 I'm a **Systems Administrator in the UK**. My day job is keeping Windows and Linux infrastructure healthy: the identities, devices, networks and servers people rely on without thinking about them. At home I run a homelab where I try new tools properly before trusting them anywhere else.
 
 <table>
