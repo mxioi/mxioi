@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-<title id="title">Michael Vickers</title>
+<title id="title">Michael V</title>
 <desc id="desc">Systems Administrator in the UK. Windows and Linux infrastructure, Active Directory, SCCM, Intune, networking and homelab automation.</desc>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b2e"/></linearGradient>
@@ -45,7 +45,7 @@
 <rect x="0" y="0" width="1200" height="5" class="bar"/>
 </g>
 <text x="64" y="86" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
-<text x="62" y="152" class="name">Michael Vickers</text>
+<text x="62" y="152" class="name">Michael V</text>
 <text x="64" y="196" class="role">Systems Administrator <tspan fill="#8b949e">·</tspan> United Kingdom</text>
 <text x="64" y="252" class="mono rot l0"><tspan class="acc">&gt;</tspan> Windows &amp; Linux infrastructure<tspan class="cur">▍</tspan></text>
 <text x="64" y="252" class="mono rot l1"><tspan class="acc">&gt;</tspan> Active Directory · SCCM/MECM · Intune<tspan class="cur">▍</tspan></text>

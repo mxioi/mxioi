@@ -75,7 +75,7 @@ def svg(t):
         f'<text x="64" y="252" class="mono rot l{i}"><tspan class="acc">&gt;</tspan> {s}<tspan class="cur">▍</tspan></text>'
         for i, s in enumerate(LINES))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-<title id="title">Michael Vickers</title>
+<title id="title">Michael V</title>
 <desc id="desc">Systems Administrator in the UK. Windows and Linux infrastructure, Active Directory, SCCM, Intune, networking and homelab automation.</desc>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg1']}"/><stop offset="1" stop-color="{c['bg2']}"/></linearGradient>
@@ -114,7 +114,7 @@ def svg(t):
 <rect x="0" y="0" width="1200" height="5" class="bar"/>
 </g>
 <text x="64" y="86" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
-<text x="62" y="152" class="name">Michael Vickers</text>
+<text x="62" y="152" class="name">Michael V</text>
 <text x="64" y="196" class="role">Systems Administrator <tspan fill="{c['muted']}">·</tspan> United Kingdom</text>
 {lines}
 <g>
