@@ -140,10 +140,13 @@ def svg(theme):
             delay = 0.25 + ci * 0.12 + ri * 0.07
             parts.append(f'<g class="item" style="animation-delay:{delay:.2f}s">')
             parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{w:.1f}" height="{CHIP_H}" rx="10" class="chip"/>')
+            beat = 2.5 + ci * 0.2 + ri * 0.3  # when the glow reaches this chip
             parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{w:.1f}" height="{CHIP_H}" rx="10" fill="none" '
                          f'stroke="{accent}" stroke-width="2" class="glow" '
-                         f'style="animation-delay:{2.5 + ci * 0.2 + ri * 0.3:.2f}s"/>')
-            parts.append(f'<g transform="translate({ix + 12:.1f} {iy + 11})">{icon(key, colour, theme == "dark")}</g>')
+                         f'style="animation-delay:{beat:.2f}s"/>')
+            parts.append(f'<g transform="translate({ix + 12:.1f} {iy + 11})"><g class="logo" '
+                         f'style="animation-delay:{delay + 0.15:.2f}s,{beat:.2f}s">'
+                         f'{icon(key, colour, theme == "dark")}</g></g>')
             parts.append(f'<text x="{ix + 46:.1f}" y="{iy + 28.5}" class="lbl">{esc(label)}</text>')
             parts.append('</g>')
 
@@ -160,9 +163,12 @@ def svg(theme):
 .col{{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}}
 .item{{animation:pop .5s ease-out both}}
 .glow{{opacity:0;animation:glow 9s ease-in-out infinite}}
+.logo{{transform-box:fill-box;transform-origin:center;animation:logo-in .6s cubic-bezier(.3,1.6,.5,1) both,logo-beat 9s ease-in-out infinite}}
 @keyframes rise{{from{{opacity:0;transform:translateY(14px)}}to{{opacity:1;transform:none}}}}
 @keyframes pop{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}
 @keyframes glow{{0%,14%,100%{{opacity:0}}5%{{opacity:.85}}}}
+@keyframes logo-in{{from{{opacity:0;transform:scale(.4) rotate(-20deg)}}to{{opacity:1;transform:none}}}}
+@keyframes logo-beat{{0%,12%,100%{{transform:none}}4%{{transform:translateY(-3px) scale(1.18)}}8%{{transform:translateY(0) scale(.97)}}}}
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important}}}}
 </style>
 <rect width="{W}" height="{H}" rx="18" fill="url(#bg)"/>

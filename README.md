@@ -8,9 +8,9 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-v-7a30b3164/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://iowto.mxioi.uk/)
-[![Open to work](https://img.shields.io/badge/Open_to_work-UK_Sysadmin_%2F_Infrastructure-2EA44F?style=for-the-badge)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
+[![Open to work](https://img.shields.io/badge/Open_to_work-UK_Sysadmin_%2F_Infrastructure-2EA44F?style=for-the-badge)](https://www.linkedin.com/in/michael-v-7a30b3164/)
 
 </div>
 
@@ -44,7 +44,7 @@ I'm a **Systems Administrator in the UK**. My day job is keeping Windows and Lin
 </table>
 
 > [!TIP]
-> 💼 **Open to Systems Administrator and Infrastructure roles in the UK.** Get in touch on [LinkedIn](https://www.linkedin.com/in/michael-vickers-7a30b3164/).
+> 💼 **Open to Systems Administrator and Infrastructure roles in the UK.** Get in touch on [LinkedIn](https://www.linkedin.com/in/michael-v-7a30b3164/).
 
 ## 🚀 Featured Projects
 
@@ -173,6 +173,6 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 
 <div align="center">
 
-<i>Happy to talk about infrastructure, automation or homelabs. The best way to reach me is on <a href="https://www.linkedin.com/in/michael-vickers-7a30b3164/">LinkedIn</a>.</i>
+<i>Happy to talk about infrastructure, automation or homelabs. The best way to reach me is on <a href="https://www.linkedin.com/in/michael-v-7a30b3164/">LinkedIn</a>.</i>
 
 </div>
