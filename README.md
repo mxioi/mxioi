@@ -16,15 +16,32 @@
 
 ## 👋 About Me
 
-I'm a **Systems Administrator in the UK** who looks after Windows and Linux infrastructure, and spends a lot of spare time building and automating things in my homelab.
+I'm a **Systems Administrator in the UK**. My day job is keeping Windows and Linux infrastructure healthy: the identities, devices, networks and servers people rely on without thinking about them. At home I run a homelab where I try new tools properly before trusting them anywhere else.
 
-- 🖥️ **Endpoint and identity management:** Active Directory, SCCM/MECM, Intune, PowerShell
-- 🌐 **Networking and security:** UniFi, pfSense, Cisco, RADIUS/802.1X, DNS and NAT
-- 🐧 **Linux and self-hosting:** Proxmox, Docker, Nginx, Bash, Python
-- ⚙️ **Automation:** scripting repetitive admin work away, plus n8n and AI-assisted workflows
-- 📚 **Currently learning:** cloud infrastructure and DevOps
+<table>
+<tr>
+<td width="50%" valign="top">
 
-I like making systems faster, more reliable and easier to run, and writing clear guides so others can do the same. The projects below are a good sample of how I work.
+**🛠️ What I do**
+
+- Manage users and devices with Active Directory, SCCM/MECM and Intune
+- Build and secure networks with UniFi, pfSense and Cisco, including WPA3-Enterprise over RADIUS
+- Self-host services on Proxmox and Docker, behind Nginx
+- Automate repetitive admin work with PowerShell, Bash, Python and n8n
+
+</td>
+<td width="50%" valign="top">
+
+**🧭 How I work**
+
+- **Automate it.** If I've done a task twice, I script it.
+- **Find the real cause.** Getting [Fusion 360 running on Linux](https://github.com/mxioi/fusion360-wine-linux) meant tracking down four separate root causes.
+- **Write it down.** Clear guides so the next person can do it without me.
+- **Keep learning.** Currently cloud infrastructure and DevOps.
+
+</td>
+</tr>
+</table>
 
 > [!TIP]
 > 💼 **Open to Systems Administrator and Infrastructure roles in the UK.** Get in touch on [LinkedIn](https://www.linkedin.com/in/michael-vickers-7a30b3164/).
@@ -123,50 +140,34 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 
 ## ⚡ Tech Stack
 
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=light">
-  <img src="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=dark" alt="Windows, Linux, Ubuntu, PowerShell, Bash, Python, Docker, Kubernetes, Nginx, Git, GitHub Actions, Azure">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
+  <img src="assets/stack-dark.svg" width="100%" alt="Tech stack. Identity and endpoints: Active Directory, SCCM/MECM, Intune, Windows Server, PowerShell. Networking and security: UniFi, pfSense, Cisco, RADIUS/802.1X, DNS and NAT. Linux and self-hosting: Proxmox, Docker, Kubernetes, Nginx, Ubuntu, Bash. Automation and code: Python, n8n, Git, GitHub Actions. Learning now: Azure cloud, DevOps.">
 </picture>
-
-</div>
-
-<table>
-<tr>
-<td><b>🪪 Identity &amp; endpoints</b></td>
-<td><img src="https://img.shields.io/badge/Active_Directory-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="Active Directory"/> <img src="https://img.shields.io/badge/SCCM%2FMECM-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="SCCM/MECM"/> <img src="https://img.shields.io/badge/Intune-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="Intune"/> <img src="https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Windows Server"/> <img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell"/></td>
-</tr>
-<tr>
-<td><b>🌐 Networking &amp; security</b></td>
-<td><img src="https://img.shields.io/badge/UniFi-0559C9?style=flat-square&logo=ubiquiti&logoColor=white" alt="UniFi"/> <img src="https://img.shields.io/badge/pfSense-212121?style=flat-square&logo=pfsense&logoColor=white" alt="pfSense"/> <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white" alt="Cisco"/> <img src="https://img.shields.io/badge/RADIUS_%2F_802.1X-444444?style=flat-square" alt="RADIUS / 802.1X"/> <img src="https://img.shields.io/badge/DNS_%26_NAT-444444?style=flat-square" alt="DNS &amp; NAT"/></td>
-</tr>
-<tr>
-<td><b>🐧 Linux &amp; self-hosting</b></td>
-<td><img src="https://img.shields.io/badge/Proxmox-E57000?style=flat-square&logo=proxmox&logoColor=white" alt="Proxmox"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes"/> <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx"/> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu"/> <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash"/></td>
-</tr>
-<tr>
-<td><b>⚙️ Automation &amp; code</b></td>
-<td><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/> <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/></td>
-</tr>
-<tr>
-<td><b>☁️ Learning now</b></td>
-<td><img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Azure"/> <img src="https://img.shields.io/badge/DevOps-444444?style=flat-square&logo=azuredevops&logoColor=white" alt="DevOps"/></td>
-</tr>
-</table>
 
 ## 📊 GitHub Activity
 
-<div align="center">
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+  <img src="assets/stats-dark.svg" width="49%" alt="GitHub stats: stars, commits, pull requests, repositories and contributions, with a weekly activity chart">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
+  <img src="assets/languages-dark.svg" width="49%" alt="Most used languages across my public repositories">
+</picture>
+</p>
 
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake.svg">
   <img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Contribution graph being eaten by a snake">
 </picture>
-
-</div>
+</p>
 
 ---
 

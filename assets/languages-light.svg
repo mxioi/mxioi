@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="250" viewBox="0 0 590 250" role="img" aria-labelledby="t">
+<title id="t">Most used languages</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+<linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0969da"/><stop offset="1" stop-color="#8250df"/></linearGradient>
+<linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0969da" stop-opacity=".35"/><stop offset="1" stop-color="#0969da" stop-opacity="0"/></linearGradient>
+</defs>
+<style>
+.h{font:700 17px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:#1f2328}
+.lbl{font:400 13.5px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:#57606a}
+.val{font:700 15px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:#1f2328}
+.fade{animation:fade .6s ease-out both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.wipe{clip-path:inset(0 100% 0 0);animation:wipe 1.2s .2s cubic-bezier(.2,.7,.2,1) forwards}@keyframes wipe{to{clip-path:inset(0 0 0 0)}}.grow{transform-box:fill-box;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<rect x=".5" y=".5" width="589" height="249" rx="16" fill="url(#bg)" stroke="#d0d7de"/>
+<rect x="24" y="24" width="4" height="20" rx="2" fill="url(#acc)"/>
+<text x="38" y="40" class="h">Most used languages</text>
+<clipPath id="bar"><rect x="26" y="66" width="538" height="12" rx="6"/></clipPath><rect x="26" y="66" width="538" height="12" rx="6" fill="#eaeef2"/><g clip-path="url(#bar)"><g class="wipe"><rect x="26.0" y="66" width="207.5" height="12" fill="#3572a5"/><rect x="233.5" y="66" width="120.7" height="12" fill="#012456"/><rect x="354.2" y="66" width="89.8" height="12" fill="#f1e05a"/><rect x="444.0" y="66" width="52.7" height="12" fill="#e34c26"/><rect x="496.7" y="66" width="41.1" height="12" fill="#663399"/><rect x="537.8" y="66" width="26.2" height="12" fill="#89e051"/></g></g><g class="fade" style="animation-delay:0.90s"><circle cx="32" cy="117" r="6" fill="#3572a5"/><text x="46" y="122" class="val" style="font-weight:600">Python</text><text x="288" y="122" class="lbl" text-anchor="end">38.3%</text><rect x="46" y="130" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="46" y="130" width="92.8" height="4" rx="2" fill="#3572a5" class="grow" style="animation-delay:1.10s"/></g>
+<g class="fade" style="animation-delay:1.00s"><circle cx="312" cy="117" r="6" fill="#012456"/><text x="326" y="122" class="val" style="font-weight:600">PowerShell</text><text x="568" y="122" class="lbl" text-anchor="end">22.3%</text><rect x="326" y="130" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="326" y="130" width="54.0" height="4" rx="2" fill="#012456" class="grow" style="animation-delay:1.20s"/></g>
+<g class="fade" style="animation-delay:1.10s"><circle cx="32" cy="157" r="6" fill="#f1e05a"/><text x="46" y="162" class="val" style="font-weight:600">JavaScript</text><text x="288" y="162" class="lbl" text-anchor="end">16.6%</text><rect x="46" y="170" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="46" y="170" width="40.2" height="4" rx="2" fill="#f1e05a" class="grow" style="animation-delay:1.30s"/></g>
+<g class="fade" style="animation-delay:1.20s"><circle cx="312" cy="157" r="6" fill="#e34c26"/><text x="326" y="162" class="val" style="font-weight:600">HTML</text><text x="568" y="162" class="lbl" text-anchor="end">9.7%</text><rect x="326" y="170" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="326" y="170" width="23.6" height="4" rx="2" fill="#e34c26" class="grow" style="animation-delay:1.40s"/></g>
+<g class="fade" style="animation-delay:1.30s"><circle cx="32" cy="197" r="6" fill="#663399"/><text x="46" y="202" class="val" style="font-weight:600">CSS</text><text x="288" y="202" class="lbl" text-anchor="end">7.6%</text><rect x="46" y="210" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="46" y="210" width="18.4" height="4" rx="2" fill="#663399" class="grow" style="animation-delay:1.50s"/></g>
+<g class="fade" style="animation-delay:1.40s"><circle cx="312" cy="197" r="6" fill="#89e051"/><text x="326" y="202" class="val" style="font-weight:600">Shell</text><text x="568" y="202" class="lbl" text-anchor="end">4.8%</text><rect x="326" y="210" width="242" height="4" rx="2" fill="#eaeef2"/><rect x="326" y="210" width="11.7" height="4" rx="2" fill="#89e051" class="grow" style="animation-delay:1.60s"/></g>
+</svg>
