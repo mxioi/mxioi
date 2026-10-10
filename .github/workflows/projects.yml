@@ -1,0 +1,42 @@
+name: Update projects
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - projects.toml
+      - scripts/update_projects.py
+  schedule:
+    - cron: "0 6 * * 1"  # Mondays, to refresh descriptions and stars
+  workflow_dispatch:
+
+jobs:
+  update:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild projects section
+        run: python scripts/update_projects.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update projects section"
+          git push

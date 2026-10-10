@@ -1,0 +1,107 @@
+# Projects shown on my GitHub profile.
+#
+# To change what's featured, edit this file and push. The "Update projects"
+# workflow rebuilds the projects section of README.md automatically, pulling
+# each repo's description, stars and language live from GitHub.
+#
+#   repo      = repository name under github.com/mxioi (required)
+#   emoji     = icon shown before the title (optional)
+#   title     = display name (optional, defaults to the repo name)
+#   summary   = one line on what it is (optional, defaults to the repo description)
+#   shows     = what it demonstrates to someone reading my profile (optional)
+#   tech      = badges to show (optional)
+#
+# Private, deleted or renamed repos are skipped automatically, so the profile
+# never shows a broken link.
+
+# Big cards at the top. Keep this to an even number (2, 4 or 6) so the grid lines up.
+[[featured]]
+repo = "local-mirror-library"
+emoji = "📚"
+title = "Local Mirror Library"
+summary = "Self-hosted offline mirror for Wikipedia and RFC pages"
+shows = "Full-stack app with FastAPI, job queue, AD/LDAP sign-in, admin panel, CI and Docker/Kubernetes deployment"
+tech = ["Python", "FastAPI", "Docker", "Kubernetes"]
+
+[[featured]]
+repo = "orbit"
+emoji = "🎙️"
+title = "Orbit"
+summary = "Hands-free desktop voice assistant with barge-in"
+shows = "Real-time audio pipeline (VAD, Whisper STT, Piper TTS) with a CUDA → Vulkan → CPU fallback chain on Windows and Linux"
+tech = ["Python", "Whisper", "CUDA", "Vulkan"]
+
+[[featured]]
+repo = "wpa3-enterprise-ad-guide"
+emoji = "🔐"
+title = "WPA3-Enterprise with AD"
+summary = "802.1X Wi-Fi using NPS/RADIUS, Active Directory and UniFi"
+shows = "Enterprise network security end to end: AD CS certificates, NPS policies and UniFi configuration"
+tech = ["Active Directory", "PowerShell", "UniFi"]
+
+[[featured]]
+repo = "fusion360-wine-linux"
+emoji = "🛠️"
+title = "Fusion 360 on Linux"
+summary = "Run Autodesk Fusion 360 on Linux with Wine/Bottles"
+shows = "Debugging four separate root causes (GPU, Wayland, OAuth, OOM) and packaging the fixes into a setup script"
+tech = ["Bash", "Linux", "Wine"]
+
+[[featured]]
+repo = "plex-direct-access"
+emoji = "🎬"
+title = "Plex Direct Access"
+summary = "Plex streaming across multiple networks with DNS and NAT"
+shows = "Practical network design using DNS and NAT forwarding to keep streams direct across networks"
+tech = ["Networking", "Bash", "Plex"]
+
+[[featured]]
+repo = "Homelab-Server-Rack-CAD-Generator"
+emoji = "🗄️"
+title = "Homelab Rack CAD Generator"
+summary = "Generate rack layouts and CAD models from Python"
+shows = "Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages"
+tech = ["Python", "CadQuery"]
+
+# Compact table inside the "More projects" dropdown.
+[[more]]
+repo = "SCCM-Guide"
+title = "SCCM Guide"
+summary = "SCCM/MECM deployment guide"
+tech = ["SCCM"]
+
+[[more]]
+repo = "AD-User-lookup-tool"
+title = "AD User Lookup"
+summary = "Find when an Active Directory user last signed in"
+tech = ["PowerShell"]
+
+[[more]]
+repo = "onedrive-remove"
+title = "OneDrive Remove"
+summary = "Cleanly remove OneDrive from Windows"
+tech = ["PowerShell"]
+
+[[more]]
+repo = "powershell-guide-for-beginners"
+title = "PowerShell Guide"
+summary = "PowerShell cheat sheet from my own learning"
+tech = ["PowerShell"]
+
+[[more]]
+repo = "SSH-Guide"
+title = "SSH Guide"
+summary = "SSH configuration guide"
+tech = ["Linux"]
+
+[[more]]
+repo = "macbookpro15-4-zorin-setup"
+title = "MacBook Pro Zorin Setup"
+summary = "Linux on a MacBook Pro 15,4"
+tech = ["Bash", "Linux"]
+
+[[more]]
+repo = "MOV-to-MP4-Converter"
+title = "MOV to MP4 Converter"
+summary = "Simple video converter"
+tech = ["Python", "FFmpeg"]

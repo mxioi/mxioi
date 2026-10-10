@@ -1,25 +1,13 @@
-<!-- Top Wave Animation -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:58a6ff&height=120&section=header" width="100%"/>
-
-<br/>
 
 <div align="center">
 
-<!-- Animated Header with Matrix-style variations -->
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=36&duration=2500&pause=1500&color=58A6FF&center=true&vCenter=true&width=600&height=60&lines=MXIOI+GitHub;%3C+MXIOI+%2F%3E;%5B+mxioi+%5D;%7B+MXIOI+%7D;01001101011110000110;.%2Fmxioi;mxioi%40github%3A~%24;%3E+MXIOI_" alt="MXIOI GitHub" />
+# Michael Vickers
 
-<br/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Systems+Administrator+%C2%B7+UK;Windows+%26+Linux+Infrastructure;Automation+%26+Homelab+Builder" alt="Systems Administrator · Windows & Linux Infrastructure · Automation & Homelab Builder" />
 
-<!-- Animated subtitle -->
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Homelab+Enthusiast;Automation+Addict;Always+Learning+%F0%9F%93%9A" alt="Typing SVG" />
-
-<br/>
-
-<!-- Social badges -->
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
 [![Portfolio](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://iowto.mxioi.uk/)
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mxioi)
-![Views](https://komarev.com/ghpvc/?username=mxioi&style=for-the-badge&color=58a6ff)
 
 </div>
 
@@ -27,21 +15,109 @@
 
 ## 👋 About Me
 
-Hey! I'm **mxioi**, a Systems Administrator from the **UK** with a passion for tinkering and building things.
+I'm a **Systems Administrator in the UK** who looks after Windows and Linux infrastructure, and spends a lot of spare time building and automating things in my homelab.
 
-Here are the languages I mostly use:
+- 🖥️ **Endpoint and identity management:** Active Directory, SCCM/MECM, Intune, PowerShell
+- 🌐 **Networking and security:** UniFi, pfSense, Cisco, RADIUS/802.1X, DNS and NAT
+- 🐧 **Linux and self-hosting:** Proxmox, Docker, Nginx, Bash, Python
+- ⚙️ **Automation:** scripting repetitive admin work away, plus n8n and AI-assisted workflows
+- 📚 **Currently learning:** cloud infrastructure and DevOps
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mxioi&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=6" width="320" />
+I like making systems faster, more reliable and easier to run, and writing clear guides so others can do the same. The projects below are a good sample of how I work.
 
-🔧 Currently working on **homelab projects** and **automation scripts**
+---
 
-📚 Learning more about **cloud infrastructure** and **DevOps**
+## 🚀 Featured Projects
 
-⚡ I love making things work better, faster, and more efficiently
+<!-- PROJECTS:START -->
+<!-- Generated from projects.toml by scripts/update_projects.py. Edit that file, not this section. -->
 
-🎯 Always up for a good IT challenge
+<table>
+<tr>
+<td width="50%" valign="top">
 
-When I'm not working, you'll find me experimenting with new tech in my homelab or contributing to open source projects.
+### 📚 [Local Mirror Library](https://github.com/mxioi/local-mirror-library)
+**Self-hosted offline mirror for Wikipedia and RFC pages**
+
+Full-stack app with FastAPI, job queue, AD/LDAP sign-in, admin panel, CI and Docker/Kubernetes deployment
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🎙️ [Orbit](https://github.com/mxioi/orbit)
+**Hands-free desktop voice assistant with barge-in**
+
+Real-time audio pipeline (VAD, Whisper STT, Piper TTS) with a CUDA → Vulkan → CPU fallback chain on Windows and Linux
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Whisper](https://img.shields.io/badge/Whisper-412991?style=flat-square&logo=openai&logoColor=white) ![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Vulkan](https://img.shields.io/badge/Vulkan-AC162C?style=flat-square&logo=vulkan&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔐 [WPA3-Enterprise with AD](https://github.com/mxioi/wpa3-enterprise-ad-guide)
+**802.1X Wi-Fi using NPS/RADIUS, Active Directory and UniFi**
+
+Enterprise network security end to end: AD CS certificates, NPS policies and UniFi configuration
+
+![Active Directory](https://img.shields.io/badge/Active%20Directory-0078D4?style=flat-square&logo=microsoft&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) ![UniFi](https://img.shields.io/badge/UniFi-0559C9?style=flat-square&logo=ubiquiti&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🛠️ [Fusion 360 on Linux](https://github.com/mxioi/fusion360-wine-linux)
+**Run Autodesk Fusion 360 on Linux with Wine/Bottles**
+
+Debugging four separate root causes (GPU, Wayland, OAuth, OOM) and packaging the fixes into a setup script
+
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![Wine](https://img.shields.io/badge/Wine-800000?style=flat-square&logo=wine&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎬 [Plex Direct Access](https://github.com/mxioi/plex-direct-access)
+**Plex streaming across multiple networks with DNS and NAT**
+
+Practical network design using DNS and NAT forwarding to keep streams direct across networks
+
+![Networking](https://img.shields.io/badge/Networking-1BA0D7?style=flat-square&logo=cisco&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![Plex](https://img.shields.io/badge/Plex-E5A00D?style=flat-square&logo=plex&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🗄️ [Homelab Rack CAD Generator](https://github.com/mxioi/Homelab-Server-Rack-CAD-Generator)
+**Generate rack layouts and CAD models from Python**
+
+Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![CadQuery](https://img.shields.io/badge/CadQuery-1F6FEB?style=flat-square&logo=python&logoColor=white)
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>📂 More projects</b></summary>
+<br/>
+
+| Project | Description | Tech |
+|:--------|:------------|:-----|
+| [SCCM Guide](https://github.com/mxioi/SCCM-Guide) | SCCM/MECM deployment guide | ![SCCM](https://img.shields.io/badge/SCCM-0078D4?style=flat-square&logo=microsoft&logoColor=white) |
+| [AD User Lookup](https://github.com/mxioi/AD-User-lookup-tool) | Find when an Active Directory user last signed in | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
+| [OneDrive Remove](https://github.com/mxioi/onedrive-remove) | Cleanly remove OneDrive from Windows | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
+| [PowerShell Guide](https://github.com/mxioi/powershell-guide-for-beginners) | PowerShell cheat sheet from my own learning | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
+| [SSH Guide](https://github.com/mxioi/SSH-Guide) | SSH configuration guide | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
+| [MacBook Pro Zorin Setup](https://github.com/mxioi/macbookpro15-4-zorin-setup) | Linux on a MacBook Pro 15,4 | ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
+| [MOV to MP4 Converter](https://github.com/mxioi/MOV-to-MP4-Converter) | Simple video converter | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white) |
+
+</details>
+
+<!-- PROJECTS:END -->
 
 ---
 
@@ -112,20 +188,14 @@ When I'm not working, you'll find me experimenting with new tech in my homelab o
 
 <div align="center">
 
-## 📊 GitHub Stats
+## 📊 GitHub Activity
 
-<!-- Snake Animation -->
-<img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+<img src="https://github-readme-stats.vercel.app/api?username=mxioi&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mxioi&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=6" height="165" />
 
 <br/><br/>
 
-<!-- Stats Cards -->
-<img src="https://github-readme-stats.vercel.app/api?username=mxioi&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" height="180" />
-
-<br/>
-
-<!-- Profile Summary -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mxioi&theme=github_dark" width="100%" />
+<img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" />
 
 </div>
 
@@ -133,87 +203,10 @@ When I'm not working, you'll find me experimenting with new tech in my homelab o
 
 <div align="center">
 
-## 🚀 Featured Projects
+### 💬 Let's Connect
+
+<i>Happy to talk about infrastructure, automation or homelabs. The best way to reach me is on <a href="https://www.linkedin.com/in/michael-vickers-7a30b3164/">LinkedIn</a>.</i>
 
 </div>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 📥 URL Downloader
-> Feature-rich terminal video downloader
-
-[![Repo](https://img.shields.io/badge/-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mxioi/url-downloader)
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Rich](https://img.shields.io/badge/Rich_TUI-000000?style=for-the-badge&logo=python&logoColor=white)
-![yt-dlp](https://img.shields.io/badge/yt--dlp-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
-
-</td>
-<td width="50%" valign="top">
-
-### 📘 SCCM Guide
-> Comprehensive SCCM/MECM deployment guide
-
-[![Repo](https://img.shields.io/badge/-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mxioi/SCCM-Guide)
-
-![Docs](https://img.shields.io/badge/Documentation-000000?style=for-the-badge&logo=readthedocs&logoColor=white)
-![Microsoft](https://img.shields.io/badge/Microsoft-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🎬 Plex Direct Access
-> Bypass Plex remote streaming restrictions
-
-[![Repo](https://img.shields.io/badge/-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mxioi/plex-direct-access)
-
-![Networking](https://img.shields.io/badge/Networking-0078D4?style=for-the-badge&logo=cisco&logoColor=white)
-![Plex](https://img.shields.io/badge/Plex-E5A00D?style=for-the-badge&logo=plex&logoColor=white)
-
-</td>
-<td width="50%" valign="top">
-
-### 🤖 Homelab Automation
-> AI-powered automation with Claude & n8n
-
-[![Repo](https://img.shields.io/badge/-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mxioi/claude-n8n-homelab-automation)
-
-![AI](https://img.shields.io/badge/AI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<details>
-<summary><b>📂 More Projects</b></summary>
-<br/>
-
-| Project | Description | Tech |
-|:--------|:------------|:-----|
-| [PowerShell Guide](https://github.com/mxioi/powershell-guide-for-beginners) | Learn PowerShell from scratch | ![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
-| [SSH Guide](https://github.com/mxioi/SSH-Guide) | Complete SSH configuration guide | ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
-| [SCCM App Automation](https://github.com/mxioi/sccm-application-automation) | Automate SCCM deployments | ![SCCM](https://img.shields.io/badge/-SCCM-0078D4?style=flat-square&logo=microsoft&logoColor=white) |
-| [MacBook Zorin Setup](https://github.com/mxioi/macbookpro15-4-zorin-setup) | Linux on MacBook Pro | ![Zorin](https://img.shields.io/badge/-Zorin-15A6F0?style=flat-square&logo=zorin&logoColor=white) |
-| [MOV to MP4 Converter](https://github.com/mxioi/MOV-to-MP4-Converter) | Simple video converter | ![FFmpeg](https://img.shields.io/badge/-FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white) |
-
-</details>
-
----
-
-<div align="center">
-
-### 💬 Let's Connect!
-
-<i>Always happy to chat about tech, homelabs, or automation projects</i>
-
-</div>
-
-<!-- Bottom Wave Animation -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:58a6ff&height=120&section=footer" width="100%"/>
