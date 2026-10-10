@@ -27,15 +27,15 @@ LINES = ["Windows &amp; Linux infrastructure",
 
 # topology nodes: id -> (x, y, label, sub)
 NODES = {
-  "wan": (980, 52, "internet", ""),
-  "fw":  (980, 122, "pfSense", "fw-01"),
-  "sw":  (980, 192, "UniFi", "core-sw"),
-  "dc":  (860, 268, "AD DS", "dc-01"),
-  "pve": (980, 268, "Proxmox", "pve-01"),
-  "k8s": (1100, 268, "Docker", "k3s-01"),
+  "wan": (990, 50, "internet", ""),
+  "fw":  (990, 130, "pfSense", "fw-01"),
+  "sw":  (990, 210, "UniFi", "core-sw"),
+  "dc":  (860, 300, "AD DS", "dc-01"),
+  "pve": (990, 300, "Proxmox", "pve-01"),
+  "k8s": (1120, 300, "Docker", "k3s-01"),
 }
 EDGES = [("wan","fw"),("fw","sw"),("sw","dc"),("sw","pve"),("sw","k8s")]
-W, H = 96, 40
+W, H = 116, 50
 
 def edge_path(a, b):
     ax, ay = NODES[a][:2]; bx, by = NODES[b][:2]
@@ -58,23 +58,23 @@ def svg(t):
         d = edge_path(a, b)
         edges.append(f'<path id="e{i}" d="{d}" class="edge"/>')
         dur = 2.2 + (i % 3) * 0.4
-        packets.append(f'<circle r="3.2" class="pkt"><animateMotion dur="{dur}s" begin="{i*0.45:.2f}s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e{i}"/></animateMotion></circle>')
-        packets.append(f'<circle r="2.6" class="pkt2"><animateMotion dur="{dur+0.6}s" begin="{i*0.3+1:.2f}s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e{i}"/></animateMotion></circle>')
+        packets.append(f'<circle r="4.2" class="pkt"><animateMotion dur="{dur}s" begin="{i*0.45:.2f}s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e{i}"/></animateMotion></circle>')
+        packets.append(f'<circle r="3.4" class="pkt2"><animateMotion dur="{dur+0.6}s" begin="{i*0.3+1:.2f}s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e{i}"/></animateMotion></circle>')
     nodes = []
     for k, (x, y, label, sub) in NODES.items():
         if k == "wan":
             nodes.append(f'<g transform="translate({x} {y})"><rect x="-{W/2}" y="-{H/2}" width="{W}" height="{H}" rx="20" class="node wan"/>'
-                         f'<text y="5" class="nl" text-anchor="middle">{label}</text></g>')
+                         f'<text y="6" class="nl" text-anchor="middle">{label}</text></g>')
             continue
         delay = list(NODES).index(k) * 0.4
         nodes.append(f'<g transform="translate({x} {y})"><rect x="-{W/2}" y="-{H/2}" width="{W}" height="{H}" rx="8" class="node"/>'
-                     f'<circle cx="-{W/2-12}" cy="-6" r="3.5" class="led" style="animation-delay:{delay}s"/>'
-                     f'<text x="-{W/2-22}" y="-2" class="nl">{label}</text>'
-                     f'<text x="-{W/2-22}" y="12" class="ns">{sub}</text></g>')
+                     f'<circle cx="-{W/2-13}" cy="-7" r="4.5" class="led" style="animation-delay:{delay}s"/>'
+                     f'<text x="-{W/2-24}" y="-2" class="nl">{label}</text>'
+                     f'<text x="-{W/2-24}" y="15" class="ns">{sub}</text></g>')
     lines = "\n".join(
-        f'<text x="64" y="252" class="mono rot l{i}"><tspan class="acc">&gt;</tspan> {s}<tspan class="cur">▍</tspan></text>'
+        f'<text x="64" y="296" class="mono rot l{i}"><tspan class="acc">&gt;</tspan> {s}<tspan class="cur">▍</tspan></text>'
         for i, s in enumerate(LINES))
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
 <title id="title">Michael V</title>
 <desc id="desc">Systems Administrator in the UK. Windows and Linux infrastructure, Active Directory, SCCM, Intune, networking and homelab automation.</desc>
 <defs>
@@ -82,16 +82,16 @@ def svg(t):
 <linearGradient id="name" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{c['accent']}"/><stop offset="1" stop-color="{c['accent2']}"/></linearGradient>
 <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="{c['dot']}"/></pattern>
 <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity=".9"/></linearGradient>
-<clipPath id="clip"><rect width="1200" height="320" rx="18"/></clipPath>
-<mask id="m"><rect width="1200" height="320" fill="url(#fade)"/></mask>
+<clipPath id="clip"><rect width="1200" height="350" rx="18"/></clipPath>
+<mask id="m"><rect width="1200" height="350" fill="url(#fade)"/></mask>
 </defs>
 <style>
 .sans{{font-family:{SANS}}}
 .mono,.nl,.ns{{font-family:{MONO}}}
-.name{{font:700 58px {SANS};fill:url(#name)}}
-.role{{font:500 25px {SANS};fill:{c['text']}}}
-.prompt{{font:15px {MONO};fill:{c['muted']}}}
-.rot{{font-size:18px;fill:{c['text']};opacity:0}}
+.name{{font:700 100px {SANS};fill:url(#name)}}
+.role{{font:500 34px {SANS};fill:{c['text']}}}
+.prompt{{font:22px {MONO};fill:{c['muted']}}}
+.rot{{font-size:26px;fill:{c['text']};opacity:0}}
 .acc{{fill:{c['accent']}}}
 .cur{{fill:{c['accent']};animation:blink 1s steps(1) infinite}}
 .edge{{fill:none;stroke:{c['line']};stroke-width:2}}
@@ -99,8 +99,8 @@ def svg(t):
 .pkt2{{fill:{c['accent2']}}}
 .node{{fill:{c['node']};stroke:{c['stroke']};stroke-width:1.5}}
 .wan{{stroke:{c['accent']};stroke-dasharray:4 4}}
-.nl{{font-size:13px;font-weight:600;fill:{c['text']}}}
-.ns{{font-size:11px;fill:{c['muted']}}}
+.nl{{font-size:17px;font-weight:600;fill:{c['text']}}}
+.ns{{font-size:14px;fill:{c['muted']}}}
 .led{{fill:{c['ok']};animation:led 2.4s ease-in-out infinite}}
 .bar{{fill:url(#name)}}
 @keyframes blink{{50%{{opacity:0}}}}
@@ -109,13 +109,13 @@ def svg(t):
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important}}.l0{{opacity:1}}.pkt,.pkt2{{display:none}}}}
 </style>
 <g clip-path="url(#clip)">
-<rect width="1200" height="320" fill="url(#bg)"/>
-<rect width="1200" height="320" fill="url(#dots)" mask="url(#m)"/>
+<rect width="1200" height="350" fill="url(#bg)"/>
+<rect width="1200" height="350" fill="url(#dots)" mask="url(#m)"/>
 <rect x="0" y="0" width="1200" height="5" class="bar"/>
 </g>
-<text x="64" y="86" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
-<text x="62" y="152" class="name">Michael V</text>
-<text x="64" y="196" class="role">Systems Administrator <tspan fill="{c['muted']}">·</tspan> United Kingdom</text>
+<text x="64" y="84" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
+<text x="58" y="180" class="name">Michael V</text>
+<text x="64" y="236" class="role">Systems Administrator <tspan fill="{c['muted']}">·</tspan> United Kingdom</text>
 {lines}
 <g>
 {chr(10).join(edges)}
