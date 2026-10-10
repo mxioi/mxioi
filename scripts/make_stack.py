@@ -70,21 +70,21 @@ GLYPHS = {
 
 THEMES = {
     "dark": dict(bg1="#0d1117", bg2="#161b2e", card="#161b22", border="#30363d", text="#e6edf3",
-                 muted="#8b949e", chip="#0d1117", sweep="#ffffff"),
+                 muted="#8b949e", chip="#0d1117"),
     "light": dict(bg1="#ffffff", bg2="#eef4ff", card="#ffffff", border="#d0d7de", text="#1f2328",
-                  muted="#57606a", chip="#f6f8fa", sweep="#58a6ff"),
+                  muted="#57606a", chip="#f6f8fa"),
 }
 SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
 MONO = "ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace"
 
-W = 1000
+W = 840
 PAD = 22
 GAP = 18
-ROWS = [3, 2]          # cards per row; the cards in STACK fill these rows in order
+ROWS = [2, 2, 1]       # cards per row; the cards in STACK fill these rows in order
 HEAD_H = 62            # space for the card title
 CHIP_H = 44
 CHIP_GAP = 10
-CHAR_W = 10.4          # rough width of one label character at 18px (semibold)
+CHAR_W = 10.2          # rough width of one label character at 18px (semibold)
 
 
 def layout():
@@ -99,7 +99,7 @@ def layout():
             x = PAD + ci * (cw + GAP)
             cx, cy, chips = x + 16, y + HEAD_H, []
             for label, key, colour in items:
-                w = 58 + len(label) * CHAR_W
+                w = 58 + len(label) * CHAR_W + sum(c.isupper() for c in label) * 2.5
                 if cx + w > x + cw - 16 and cx > x + 16:
                     cx, cy = x + 16, cy + CHIP_H + CHIP_GAP
                 chips.append((cx, cy, w, label, key, colour))
@@ -134,16 +134,16 @@ def svg(theme):
         parts.append(f'<g class="col" style="animation-delay:{ci * 0.12:.2f}s">')
         parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{h}" rx="16" class="card"/>')
         parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="5" rx="2.5" fill="{accent}"/>')
-        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{h}" rx="16" fill="url(#sweep)" '
-                     f'class="sweep" style="animation-delay:{2 + ci * 0.35:.2f}s"/>')
         parts.append(f'<text x="{x + 18:.1f}" y="{y + 40}" class="head" fill="{accent}">{esc(title)}</text>')
         parts.append('</g>')
         for ri, (ix, iy, w, label, key, colour) in enumerate(chips):
             delay = 0.25 + ci * 0.12 + ri * 0.07
             parts.append(f'<g class="item" style="animation-delay:{delay:.2f}s">')
             parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{w:.1f}" height="{CHIP_H}" rx="10" class="chip"/>')
-            parts.append(f'<g transform="translate({ix + 12:.1f} {iy + 11})"><g class="ico" '
-                         f'style="animation-delay:{delay + 3:.2f}s">{icon(key, colour, theme == "dark")}</g></g>')
+            parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{w:.1f}" height="{CHIP_H}" rx="10" fill="none" '
+                         f'stroke="{accent}" stroke-width="2" class="glow" '
+                         f'style="animation-delay:{2.5 + ci * 0.2 + ri * 0.3:.2f}s"/>')
+            parts.append(f'<g transform="translate({ix + 12:.1f} {iy + 11})">{icon(key, colour, theme == "dark")}</g>')
             parts.append(f'<text x="{ix + 46:.1f}" y="{iy + 28.5}" class="lbl">{esc(label)}</text>')
             parts.append('</g>')
 
@@ -151,9 +151,6 @@ def svg(theme):
 <title id="t">Tech stack: {esc(", ".join(label for _, _, items in STACK for label, _, _ in items))}</title>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg1']}"/><stop offset="1" stop-color="{c['bg2']}"/></linearGradient>
-<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-<stop offset="0" stop-color="{c['sweep']}" stop-opacity="0"/><stop offset=".5" stop-color="{c['sweep']}" stop-opacity=".07"/><stop offset="1" stop-color="{c['sweep']}" stop-opacity="0"/>
-</linearGradient>
 </defs>
 <style>
 .card{{fill:{c['card']};stroke:{c['border']};stroke-width:1}}
@@ -161,13 +158,11 @@ def svg(theme):
 .head{{font:700 20px {SANS};letter-spacing:.2px}}
 .lbl{{font:600 18px {SANS};fill:{c['text']}}}
 .col{{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}}
-.item{{animation:pop .5s cubic-bezier(.2,.7,.2,1) both}}
-.ico{{transform-box:fill-box;transform-origin:center;animation:bob 6s ease-in-out infinite}}
-.sweep{{opacity:0;animation:sweep 7s ease-in-out infinite}}
+.item{{animation:pop .5s ease-out both}}
+.glow{{opacity:0;animation:glow 9s ease-in-out infinite}}
 @keyframes rise{{from{{opacity:0;transform:translateY(14px)}}to{{opacity:1;transform:none}}}}
-@keyframes pop{{from{{opacity:0;transform:translateX(-10px)}}to{{opacity:1;transform:none}}}}
-@keyframes bob{{0%,88%,100%{{transform:translate(0,0)}}92%{{transform:translate(0,-2px)}}96%{{transform:translate(0,1px)}}}}
-@keyframes sweep{{0%,70%,100%{{opacity:0}}80%{{opacity:1}}}}
+@keyframes pop{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}
+@keyframes glow{{0%,14%,100%{{opacity:0}}5%{{opacity:.85}}}}
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important}}}}
 </style>
 <rect width="{W}" height="{H}" rx="18" fill="url(#bg)"/>
