@@ -59,7 +59,7 @@ Real-time audio pipeline (VAD, Whisper STT, Piper TTS) with a CUDA → Vulkan �
 <td width="50%" valign="top">
 
 ### 🔐 [WPA3-Enterprise with AD](https://github.com/mxioi/wpa3-enterprise-ad-guide)
-**802.1X Wi-Fi using NPS/RADIUS, Active Directory and UniFi**
+**802.1X Wi-Fi using NPS/RADIUS, Active Directory and UniFi** · ⭐ 1
 
 Enterprise network security end to end: AD CS certificates, NPS policies and UniFi configuration
 
@@ -69,7 +69,7 @@ Enterprise network security end to end: AD CS certificates, NPS policies and Uni
 <td width="50%" valign="top">
 
 ### 🛠️ [Fusion 360 on Linux](https://github.com/mxioi/fusion360-wine-linux)
-**Run Autodesk Fusion 360 on Linux with Wine/Bottles**
+**Run Autodesk Fusion 360 on Linux with Wine/Bottles** · ⭐ 4
 
 Debugging four separate root causes (GPU, Wayland, OAuth, OOM) and packaging the fixes into a setup script
 
@@ -81,7 +81,7 @@ Debugging four separate root causes (GPU, Wayland, OAuth, OOM) and packaging the
 <td width="50%" valign="top">
 
 ### 🎬 [Plex Direct Access](https://github.com/mxioi/plex-direct-access)
-**Plex streaming across multiple networks with DNS and NAT**
+**Plex streaming across multiple networks with DNS and NAT** · ⭐ 1
 
 Practical network design using DNS and NAT forwarding to keep streams direct across networks
 
