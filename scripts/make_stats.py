@@ -56,7 +56,8 @@ THEMES = {
                   accent="#0969da", accent2="#8250df", track="#eaeef2", grid="#eaeef2"),
 }
 SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
-W, H = 590, 250
+W, H = 1000, 300
+LANG_H = 250
 
 ICONS = {
     "star": '<path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.13 6.38 20.1l1.07-6.27L2.9 9.4l6.3-.9z"/>',
@@ -121,7 +122,7 @@ def summarise(u):
     }
 
 
-def frame(c, title, body, extra_css=""):
+def frame(c, title, body, extra_css="", H=H):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
 <title id="t">{title}</title>
 <defs>
@@ -130,17 +131,17 @@ def frame(c, title, body, extra_css=""):
 <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c['accent']}" stop-opacity=".35"/><stop offset="1" stop-color="{c['accent']}" stop-opacity="0"/></linearGradient>
 </defs>
 <style>
-.h{{font:700 17px {SANS};fill:{c['text']}}}
-.lbl{{font:400 13.5px {SANS};fill:{c['muted']}}}
-.val{{font:700 15px {SANS};fill:{c['text']}}}
+.h{{font:700 24px {SANS};fill:{c['text']}}}
+.lbl{{font:400 19px {SANS};fill:{c['muted']}}}
+.val{{font:700 22px {SANS};fill:{c['text']}}}
 .fade{{animation:fade .6s ease-out both}}
 @keyframes fade{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}
 {extra_css}
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important}}}}
 </style>
 <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="16" fill="url(#bg)" stroke="{c['border']}"/>
-<rect x="24" y="24" width="4" height="20" rx="2" fill="url(#acc)"/>
-<text x="38" y="40" class="h">{title}</text>
+<rect x="28" y="28" width="5" height="26" rx="2.5" fill="url(#acc)"/>
+<text x="46" y="50" class="h">{title}</text>
 {body}
 </svg>
 '''
@@ -150,16 +151,16 @@ def stats_svg(theme, data):
     c = THEMES[theme]
     rows = []
     for i, (ico, label, value) in enumerate(data["stats"]):
-        y = 74 + i * 34
+        y = 104 + i * 42
         rows.append(f'<g class="fade" style="animation-delay:{0.15 + i * 0.1:.2f}s">'
-                    f'<g transform="translate(26 {y - 14}) scale(.75)" fill="none" stroke="{c["accent"]}" stroke-width="2" '
+                    f'<g transform="translate(30 {y - 19})" fill="none" stroke="{c["accent"]}" stroke-width="2" '
                     f'stroke-linecap="round" stroke-linejoin="round">{ICONS[ico]}</g>'
-                    f'<text x="52" y="{y}" class="lbl">{label}</text>'
-                    f'<text x="300" y="{y}" class="val" text-anchor="end">{value:,}</text></g>')
+                    f'<text x="66" y="{y}" class="lbl">{label}</text>'
+                    f'<text x="470" y="{y}" class="val" text-anchor="end">{value:,}</text></g>')
 
     # Weekly activity sparkline, drawn on with a stroke animation.
     weekly = data["weekly"][-52:] or [0]
-    x0, x1, y0, y1 = 330, W - 26, 70, 214
+    x0, x1, y0, y1 = 530, W - 30, 92, 248
     peak = max(weekly) or 1
     step = (x1 - x0) / max(len(weekly) - 1, 1)
     # Square-root scale so one busy week doesn't flatten the rest of the year.
@@ -174,10 +175,10 @@ def stats_svg(theme, data):
     area = line + f" L{x1:.1f} {y1} L{x0} {y1} Z"
     grid = "".join(f'<path d="M{x0} {y0 + k * (y1 - y0) / 3:.1f}H{x1}" stroke="{c["grid"]}"/>' for k in range(4))
     chart = (f'{grid}<path d="{area}" fill="url(#area)" class="area"/>'
-             f'<path d="{line}" fill="none" stroke="url(#acc)" stroke-width="2.2" stroke-linejoin="round" '
+             f'<path d="{line}" fill="none" stroke="url(#acc)" stroke-width="3" stroke-linejoin="round" '
              f'stroke-linecap="round" pathLength="1" class="draw"/>'
-             f'<circle cx="{pts[-1][0]:.1f}" cy="{pts[-1][1]:.1f}" r="4" fill="{c["accent2"]}" class="dot"/>'
-             f'<text x="{x0}" y="{y1 + 22}" class="lbl" style="font-size:12px">Weekly activity, last 12 months</text>')
+             f'<circle cx="{pts[-1][0]:.1f}" cy="{pts[-1][1]:.1f}" r="5.5" fill="{c["accent2"]}" class="dot"/>'
+             f'<text x="{x0}" y="{y1 + 30}" class="lbl" style="font-size:16px">Weekly activity, last 12 months</text>')
     css = (".draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s .3s ease-out forwards}"
            "@keyframes draw{to{stroke-dashoffset:0}}"
            ".area{opacity:0;animation:fade 1s 1.6s ease-out forwards}"
@@ -197,30 +198,30 @@ def visible(colour, theme):
 def langs_svg(theme, data):
     c = THEMES[theme]
     langs = [(n, visible(col, theme), p) for n, col, p in data["langs"]]
-    x0, bw, by = 26, W - 52, 66
+    x0, bw, by = 30, W - 60, 82
     segs, legend = [], []
     x = x0
     for i, (name, colour, pct) in enumerate(langs):
         w = bw * pct / sum(p for _, _, p in langs)
-        segs.append(f'<rect x="{x:.1f}" y="{by}" width="{w:.1f}" height="12" fill="{colour}"/>')
+        segs.append(f'<rect x="{x:.1f}" y="{by}" width="{w:.1f}" height="16" fill="{colour}"/>')
         x += w
-        col, row = i % 2, i // 2
-        lx, ly = 26 + col * 280, 122 + row * 40
+        col, row = i % 3, i // 3
+        lx, ly = 30 + col * 322, 152 + row * 60
         legend.append(f'<g class="fade" style="animation-delay:{0.9 + i * 0.1:.2f}s">'
-                      f'<circle cx="{lx + 6}" cy="{ly - 5}" r="6" fill="{colour}"/>'
-                      f'<text x="{lx + 20}" y="{ly}" class="val" style="font-weight:600">{name}</text>'
-                      f'<text x="{lx + 262}" y="{ly}" class="lbl" text-anchor="end">{pct:.1f}%</text>'
-                      f'<rect x="{lx + 20}" y="{ly + 8}" width="242" height="4" rx="2" fill="{c["track"]}"/>'
-                      f'<rect x="{lx + 20}" y="{ly + 8}" width="{max(242 * pct / 100, 3):.1f}" height="4" rx="2" '
+                      f'<circle cx="{lx + 8}" cy="{ly - 7}" r="8" fill="{colour}"/>'
+                      f'<text x="{lx + 26}" y="{ly}" class="val" style="font-weight:600">{name}</text>'
+                      f'<text x="{lx + 296}" y="{ly}" class="lbl" text-anchor="end">{pct:.1f}%</text>'
+                      f'<rect x="{lx + 26}" y="{ly + 12}" width="270" height="6" rx="3" fill="{c["track"]}"/>'
+                      f'<rect x="{lx + 26}" y="{ly + 12}" width="{max(270 * pct / 100, 4):.1f}" height="6" rx="3" '
                       f'fill="{colour}" class="grow" style="animation-delay:{1.1 + i * 0.1:.2f}s"/></g>')
-    body = (f'<clipPath id="bar"><rect x="{x0}" y="{by}" width="{bw}" height="12" rx="6"/></clipPath>'
-            f'<rect x="{x0}" y="{by}" width="{bw}" height="12" rx="6" fill="{c["track"]}"/>'
+    body = (f'<clipPath id="bar"><rect x="{x0}" y="{by}" width="{bw}" height="16" rx="8"/></clipPath>'
+            f'<rect x="{x0}" y="{by}" width="{bw}" height="16" rx="8" fill="{c["track"]}"/>'
             f'<g clip-path="url(#bar)"><g class="wipe">{"".join(segs)}</g></g>' + "\n".join(legend))
     css = (f".wipe{{clip-path:inset(0 100% 0 0);animation:wipe 1.2s .2s cubic-bezier(.2,.7,.2,1) forwards}}"
            "@keyframes wipe{to{clip-path:inset(0 0 0 0)}}"
            ".grow{transform-box:fill-box;transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}"
            "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}")
-    return frame(c, "Most used languages", body, css)
+    return frame(c, "Most used languages", body, css, LANG_H)
 
 
 def main():

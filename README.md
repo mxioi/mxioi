@@ -152,12 +152,12 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
-  <img src="assets/stats-dark.svg" width="49%" alt="GitHub stats: stars, commits, pull requests, repositories and contributions, with a weekly activity chart">
+  <img src="assets/stats-dark.svg" width="100%" alt="GitHub stats: stars, commits, pull requests, repositories and contributions, with a weekly activity chart">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
-  <img src="assets/languages-dark.svg" width="49%" alt="Most used languages across my public repositories">
+  <img src="assets/languages-dark.svg" width="100%" alt="Most used languages across my public repositories">
 </picture>
 </p>
 

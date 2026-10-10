@@ -77,14 +77,39 @@ THEMES = {
 SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
 MONO = "ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace"
 
-W = 1200
-PAD = 24
-GAP = 16
-COL_W = (W - 2 * PAD - GAP * (len(STACK) - 1)) / len(STACK)
-ROW_H = 40
-HEAD_H = 58
-H = PAD * 2 + HEAD_H + ROW_H * max(len(items) for _, _, items in STACK) + 12
+W = 1000
+PAD = 22
+GAP = 18
+ROWS = [3, 2]          # cards per row; the cards in STACK fill these rows in order
+HEAD_H = 62            # space for the card title
+CHIP_H = 44
+CHIP_GAP = 10
+CHAR_W = 10.4          # rough width of one label character at 18px (semibold)
 
+
+def layout():
+    """Place cards in rows and flow each card's chips left to right, wrapping as needed."""
+    cards, y, i = [], PAD, 0
+    for n in ROWS:
+        row = STACK[i:i + n]
+        i += n
+        cw = (W - 2 * PAD - GAP * (n - 1)) / n
+        placed = []
+        for ci, (title, accent, items) in enumerate(row):
+            x = PAD + ci * (cw + GAP)
+            cx, cy, chips = x + 16, y + HEAD_H, []
+            for label, key, colour in items:
+                w = 58 + len(label) * CHAR_W
+                if cx + w > x + cw - 16 and cx > x + 16:
+                    cx, cy = x + 16, cy + CHIP_H + CHIP_GAP
+                chips.append((cx, cy, w, label, key, colour))
+                cx += w + CHIP_GAP
+            placed.append([x, cw, title, accent, chips, cy + CHIP_H + 18 - y])
+        h = max(c[5] for c in placed)
+        for c in placed:
+            cards.append((c[0], y, c[1], h, c[2], c[3], c[4]))
+        y += h + GAP
+    return cards, y - GAP + PAD
 
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;")
@@ -97,34 +122,29 @@ def icon(key, colour, dark):
         if dark and hex_.lower() in ("#000000", "#212121", "#181717", "#1d1d1d", "#2088ff"):
             hex_ = "#e6edf3" if hex_.lower() != "#2088ff" else hex_
         return f'<path d="{ICONS[key]["path"]}" fill="{hex_}"/>'
-    return (f'<g fill="none" stroke="{colour}" stroke-width="1.8" stroke-linecap="round" '
+    return (f'<g fill="none" stroke="{colour}" stroke-width="2" stroke-linecap="round" '
             f'stroke-linejoin="round">{GLYPHS[key]}</g>')
 
 
 def svg(theme):
     c = THEMES[theme]
+    cards, H = layout()
     parts = []
-    delay = 0.0
-    for ci, (title, accent, items) in enumerate(STACK):
-        x = PAD + ci * (COL_W + GAP)
-        y = PAD
-        h = H - 2 * PAD
+    for ci, (x, y, cw, h, title, accent, chips) in enumerate(cards):
         parts.append(f'<g class="col" style="animation-delay:{ci * 0.12:.2f}s">')
-        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{COL_W:.1f}" height="{h}" rx="14" class="card"/>')
-        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{COL_W:.1f}" height="4" rx="2" fill="{accent}"/>')
-        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{COL_W:.1f}" height="{h}" rx="14" fill="url(#sweep)" '
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{h}" rx="16" class="card"/>')
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="5" rx="2.5" fill="{accent}"/>')
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{h}" rx="16" fill="url(#sweep)" '
                      f'class="sweep" style="animation-delay:{2 + ci * 0.35:.2f}s"/>')
-        parts.append(f'<text x="{x + 16:.1f}" y="{y + 36}" class="head" fill="{accent}">{esc(title)}</text>')
+        parts.append(f'<text x="{x + 18:.1f}" y="{y + 40}" class="head" fill="{accent}">{esc(title)}</text>')
         parts.append('</g>')
-        for ri, (label, key, colour) in enumerate(items):
-            iy = y + HEAD_H + ri * ROW_H
-            ix = x + 14
+        for ri, (ix, iy, w, label, key, colour) in enumerate(chips):
             delay = 0.25 + ci * 0.12 + ri * 0.07
             parts.append(f'<g class="item" style="animation-delay:{delay:.2f}s">')
-            parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{COL_W - 28:.1f}" height="32" rx="8" class="chip"/>')
-            parts.append(f'<g transform="translate({ix + 9:.1f} {iy + 7}) scale(0.75)"><g class="ico" '
+            parts.append(f'<rect x="{ix:.1f}" y="{iy}" width="{w:.1f}" height="{CHIP_H}" rx="10" class="chip"/>')
+            parts.append(f'<g transform="translate({ix + 12:.1f} {iy + 11})"><g class="ico" '
                          f'style="animation-delay:{delay + 3:.2f}s">{icon(key, colour, theme == "dark")}</g></g>')
-            parts.append(f'<text x="{ix + 36:.1f}" y="{iy + 21}" class="lbl">{esc(label)}</text>')
+            parts.append(f'<text x="{ix + 46:.1f}" y="{iy + 28.5}" class="lbl">{esc(label)}</text>')
             parts.append('</g>')
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t">
@@ -138,8 +158,8 @@ def svg(theme):
 <style>
 .card{{fill:{c['card']};stroke:{c['border']};stroke-width:1}}
 .chip{{fill:{c['chip']};stroke:{c['border']};stroke-width:1}}
-.head{{font:700 14px {SANS};letter-spacing:.2px}}
-.lbl{{font:500 13.5px {SANS};fill:{c['text']}}}
+.head{{font:700 20px {SANS};letter-spacing:.2px}}
+.lbl{{font:600 18px {SANS};fill:{c['text']}}}
 .col{{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}}
 .item{{animation:pop .5s cubic-bezier(.2,.7,.2,1) both}}
 .ico{{transform-box:fill-box;transform-origin:center;animation:bob 6s ease-in-out infinite}}

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
 <title id="title">Michael V</title>
 <desc id="desc">Systems Administrator in the UK. Windows and Linux infrastructure, Active Directory, SCCM, Intune, networking and homelab automation.</desc>
 <defs>
@@ -6,16 +6,16 @@
 <linearGradient id="name" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#a371f7"/></linearGradient>
 <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#30363d"/></pattern>
 <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity=".9"/></linearGradient>
-<clipPath id="clip"><rect width="1200" height="320" rx="18"/></clipPath>
-<mask id="m"><rect width="1200" height="320" fill="url(#fade)"/></mask>
+<clipPath id="clip"><rect width="1200" height="350" rx="18"/></clipPath>
+<mask id="m"><rect width="1200" height="350" fill="url(#fade)"/></mask>
 </defs>
 <style>
 .sans{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif}
 .mono,.nl,.ns{font-family:ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace}
-.name{font:700 58px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:url(#name)}
-.role{font:500 25px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf3}
-.prompt{font:15px ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#8b949e}
-.rot{font-size:18px;fill:#e6edf3;opacity:0}
+.name{font:700 100px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:url(#name)}
+.role{font:500 34px 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf3}
+.prompt{font:22px ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;fill:#8b949e}
+.rot{font-size:26px;fill:#e6edf3;opacity:0}
 .acc{fill:#58a6ff}
 .cur{fill:#58a6ff;animation:blink 1s steps(1) infinite}
 .edge{fill:none;stroke:#30363d;stroke-width:2}
@@ -23,8 +23,8 @@
 .pkt2{fill:#a371f7}
 .node{fill:#161b22;stroke:#30363d;stroke-width:1.5}
 .wan{stroke:#58a6ff;stroke-dasharray:4 4}
-.nl{font-size:13px;font-weight:600;fill:#e6edf3}
-.ns{font-size:11px;fill:#8b949e}
+.nl{font-size:17px;font-weight:600;fill:#e6edf3}
+.ns{font-size:14px;fill:#8b949e}
 .led{fill:#3fb950;animation:led 2.4s ease-in-out infinite}
 .bar{fill:url(#name)}
 @keyframes blink{50%{opacity:0}}
@@ -40,38 +40,38 @@
 @media (prefers-reduced-motion: reduce){*{animation:none!important}.l0{opacity:1}.pkt,.pkt2{display:none}}
 </style>
 <g clip-path="url(#clip)">
-<rect width="1200" height="320" fill="url(#bg)"/>
-<rect width="1200" height="320" fill="url(#dots)" mask="url(#m)"/>
+<rect width="1200" height="350" fill="url(#bg)"/>
+<rect width="1200" height="350" fill="url(#dots)" mask="url(#m)"/>
 <rect x="0" y="0" width="1200" height="5" class="bar"/>
 </g>
-<text x="64" y="86" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
-<text x="62" y="152" class="name">Michael V</text>
-<text x="64" y="196" class="role">Systems Administrator <tspan fill="#8b949e">·</tspan> United Kingdom</text>
-<text x="64" y="252" class="mono rot l0"><tspan class="acc">&gt;</tspan> Windows &amp; Linux infrastructure<tspan class="cur">▍</tspan></text>
-<text x="64" y="252" class="mono rot l1"><tspan class="acc">&gt;</tspan> Active Directory · SCCM/MECM · Intune<tspan class="cur">▍</tspan></text>
-<text x="64" y="252" class="mono rot l2"><tspan class="acc">&gt;</tspan> UniFi · pfSense · RADIUS/802.1X<tspan class="cur">▍</tspan></text>
-<text x="64" y="252" class="mono rot l3"><tspan class="acc">&gt;</tspan> Proxmox · Docker · homelab automation<tspan class="cur">▍</tspan></text>
+<text x="64" y="84" class="prompt"><tspan class="acc">michael@homelab</tspan>:~$ whoami</text>
+<text x="58" y="180" class="name">Michael V</text>
+<text x="64" y="236" class="role">Systems Administrator <tspan fill="#8b949e">·</tspan> United Kingdom</text>
+<text x="64" y="296" class="mono rot l0"><tspan class="acc">&gt;</tspan> Windows &amp; Linux infrastructure<tspan class="cur">▍</tspan></text>
+<text x="64" y="296" class="mono rot l1"><tspan class="acc">&gt;</tspan> Active Directory · SCCM/MECM · Intune<tspan class="cur">▍</tspan></text>
+<text x="64" y="296" class="mono rot l2"><tspan class="acc">&gt;</tspan> UniFi · pfSense · RADIUS/802.1X<tspan class="cur">▍</tspan></text>
+<text x="64" y="296" class="mono rot l3"><tspan class="acc">&gt;</tspan> Proxmox · Docker · homelab automation<tspan class="cur">▍</tspan></text>
 <g>
-<path id="e0" d="M980 72.0 V102.0" class="edge"/>
-<path id="e1" d="M980 142.0 V172.0" class="edge"/>
-<path id="e2" d="M980 212.0 V230.0 H860 V248.0" class="edge"/>
-<path id="e3" d="M980 212.0 V248.0" class="edge"/>
-<path id="e4" d="M980 212.0 V230.0 H1100 V248.0" class="edge"/>
-<circle r="3.2" class="pkt"><animateMotion dur="2.2s" begin="0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion></circle>
-<circle r="2.6" class="pkt2"><animateMotion dur="2.8000000000000003s" begin="1.00s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion></circle>
-<circle r="3.2" class="pkt"><animateMotion dur="2.6s" begin="0.45s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion></circle>
-<circle r="2.6" class="pkt2"><animateMotion dur="3.2s" begin="1.30s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion></circle>
-<circle r="3.2" class="pkt"><animateMotion dur="3.0s" begin="0.90s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion></circle>
-<circle r="2.6" class="pkt2"><animateMotion dur="3.6s" begin="1.60s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion></circle>
-<circle r="3.2" class="pkt"><animateMotion dur="2.2s" begin="1.35s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion></circle>
-<circle r="2.6" class="pkt2"><animateMotion dur="2.8000000000000003s" begin="1.90s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion></circle>
-<circle r="3.2" class="pkt"><animateMotion dur="2.6s" begin="1.80s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion></circle>
-<circle r="2.6" class="pkt2"><animateMotion dur="3.2s" begin="2.20s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion></circle>
-<g transform="translate(980 52)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="20" class="node wan"/><text y="5" class="nl" text-anchor="middle">internet</text></g>
-<g transform="translate(980 122)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="8" class="node"/><circle cx="-36.0" cy="-6" r="3.5" class="led" style="animation-delay:0.4s"/><text x="-26.0" y="-2" class="nl">pfSense</text><text x="-26.0" y="12" class="ns">fw-01</text></g>
-<g transform="translate(980 192)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="8" class="node"/><circle cx="-36.0" cy="-6" r="3.5" class="led" style="animation-delay:0.8s"/><text x="-26.0" y="-2" class="nl">UniFi</text><text x="-26.0" y="12" class="ns">core-sw</text></g>
-<g transform="translate(860 268)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="8" class="node"/><circle cx="-36.0" cy="-6" r="3.5" class="led" style="animation-delay:1.2000000000000002s"/><text x="-26.0" y="-2" class="nl">AD DS</text><text x="-26.0" y="12" class="ns">dc-01</text></g>
-<g transform="translate(980 268)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="8" class="node"/><circle cx="-36.0" cy="-6" r="3.5" class="led" style="animation-delay:1.6s"/><text x="-26.0" y="-2" class="nl">Proxmox</text><text x="-26.0" y="12" class="ns">pve-01</text></g>
-<g transform="translate(1100 268)"><rect x="-48.0" y="-20.0" width="96" height="40" rx="8" class="node"/><circle cx="-36.0" cy="-6" r="3.5" class="led" style="animation-delay:2.0s"/><text x="-26.0" y="-2" class="nl">Docker</text><text x="-26.0" y="12" class="ns">k3s-01</text></g>
+<path id="e0" d="M990 75.0 V105.0" class="edge"/>
+<path id="e1" d="M990 155.0 V185.0" class="edge"/>
+<path id="e2" d="M990 235.0 V255.0 H860 V275.0" class="edge"/>
+<path id="e3" d="M990 235.0 V275.0" class="edge"/>
+<path id="e4" d="M990 235.0 V255.0 H1120 V275.0" class="edge"/>
+<circle r="4.2" class="pkt"><animateMotion dur="2.2s" begin="0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion></circle>
+<circle r="3.4" class="pkt2"><animateMotion dur="2.8000000000000003s" begin="1.00s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion></circle>
+<circle r="4.2" class="pkt"><animateMotion dur="2.6s" begin="0.45s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion></circle>
+<circle r="3.4" class="pkt2"><animateMotion dur="3.2s" begin="1.30s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion></circle>
+<circle r="4.2" class="pkt"><animateMotion dur="3.0s" begin="0.90s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion></circle>
+<circle r="3.4" class="pkt2"><animateMotion dur="3.6s" begin="1.60s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion></circle>
+<circle r="4.2" class="pkt"><animateMotion dur="2.2s" begin="1.35s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion></circle>
+<circle r="3.4" class="pkt2"><animateMotion dur="2.8000000000000003s" begin="1.90s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion></circle>
+<circle r="4.2" class="pkt"><animateMotion dur="2.6s" begin="1.80s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion></circle>
+<circle r="3.4" class="pkt2"><animateMotion dur="3.2s" begin="2.20s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion></circle>
+<g transform="translate(990 50)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="20" class="node wan"/><text y="6" class="nl" text-anchor="middle">internet</text></g>
+<g transform="translate(990 130)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="8" class="node"/><circle cx="-45.0" cy="-7" r="4.5" class="led" style="animation-delay:0.4s"/><text x="-34.0" y="-2" class="nl">pfSense</text><text x="-34.0" y="15" class="ns">fw-01</text></g>
+<g transform="translate(990 210)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="8" class="node"/><circle cx="-45.0" cy="-7" r="4.5" class="led" style="animation-delay:0.8s"/><text x="-34.0" y="-2" class="nl">UniFi</text><text x="-34.0" y="15" class="ns">core-sw</text></g>
+<g transform="translate(860 300)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="8" class="node"/><circle cx="-45.0" cy="-7" r="4.5" class="led" style="animation-delay:1.2000000000000002s"/><text x="-34.0" y="-2" class="nl">AD DS</text><text x="-34.0" y="15" class="ns">dc-01</text></g>
+<g transform="translate(990 300)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="8" class="node"/><circle cx="-45.0" cy="-7" r="4.5" class="led" style="animation-delay:1.6s"/><text x="-34.0" y="-2" class="nl">Proxmox</text><text x="-34.0" y="15" class="ns">pve-01</text></g>
+<g transform="translate(1120 300)"><rect x="-58.0" y="-25.0" width="116" height="50" rx="8" class="node"/><circle cx="-45.0" cy="-7" r="4.5" class="led" style="animation-delay:2.0s"/><text x="-34.0" y="-2" class="nl">Docker</text><text x="-34.0" y="15" class="ns">k3s-01</text></g>
 </g>
 </svg>
