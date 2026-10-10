@@ -1,17 +1,18 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:58a6ff&height=120&section=header" width="100%"/>
+<a href="https://github.com/mxioi">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+    <img src="assets/header-dark.svg" width="100%" alt="Michael Vickers, Systems Administrator in the United Kingdom. Windows and Linux infrastructure, Active Directory, SCCM, Intune, networking and homelab automation.">
+  </picture>
+</a>
 
 <div align="center">
 
-# Michael Vickers
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Systems+Administrator+%C2%B7+UK;Windows+%26+Linux+Infrastructure;Automation+%26+Homelab+Builder" alt="Systems Administrator · Windows & Linux Infrastructure · Automation & Homelab Builder" />
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://iowto.mxioi.uk/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://iowto.mxioi.uk/)
+[![Open to work](https://img.shields.io/badge/Open_to_work-UK_Sysadmin_%2F_Infrastructure-2EA44F?style=for-the-badge)](https://www.linkedin.com/in/michael-vickers-7a30b3164/)
 
 </div>
-
----
 
 ## 👋 About Me
 
@@ -25,9 +26,8 @@ I'm a **Systems Administrator in the UK** who looks after Windows and Linux infr
 
 I like making systems faster, more reliable and easier to run, and writing clear guides so others can do the same. The projects below are a good sample of how I work.
 
+> [!TIP]
 > 💼 **Open to Systems Administrator and Infrastructure roles in the UK.** Get in touch on [LinkedIn](https://www.linkedin.com/in/michael-vickers-7a30b3164/).
-
----
 
 ## 🚀 Featured Projects
 
@@ -121,77 +121,57 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 
 <!-- PROJECTS:END -->
 
----
+## ⚡ Tech Stack
 
 <div align="center">
 
-## ⚡ Tech Stack
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=light">
+  <img src="https://skillicons.dev/icons?i=windows,linux,ubuntu,powershell,bash,python,docker,kubernetes,nginx,git,githubactions,azure&theme=dark" alt="Windows, Linux, Ubuntu, PowerShell, Bash, Python, Docker, Kubernetes, Nginx, Git, GitHub Actions, Azure">
+</picture>
+
+</div>
 
 <table>
 <tr>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="65" height="65" />
-</a>
-<br>Docker
-</td>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" width="65" height="65" />
-</a>
-<br>Python
-</td>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/github-icon.svg" alt="GitHub" width="65" height="65" />
-</a>
-<br>GitHub
-</td>
-<td align="center" width="96">
-<a href="#tech-stack">
-<img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="Nginx" width="65" height="65" />
-</a>
-<br>Nginx
-</td>
+<td><b>🪪 Identity &amp; endpoints</b></td>
+<td><img src="https://img.shields.io/badge/Active_Directory-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="Active Directory"/> <img src="https://img.shields.io/badge/SCCM%2FMECM-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="SCCM/MECM"/> <img src="https://img.shields.io/badge/Intune-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="Intune"/> <img src="https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Windows Server"/> <img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell"/></td>
+</tr>
+<tr>
+<td><b>🌐 Networking &amp; security</b></td>
+<td><img src="https://img.shields.io/badge/UniFi-0559C9?style=flat-square&logo=ubiquiti&logoColor=white" alt="UniFi"/> <img src="https://img.shields.io/badge/pfSense-212121?style=flat-square&logo=pfsense&logoColor=white" alt="pfSense"/> <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white" alt="Cisco"/> <img src="https://img.shields.io/badge/RADIUS_%2F_802.1X-444444?style=flat-square" alt="RADIUS / 802.1X"/> <img src="https://img.shields.io/badge/DNS_%26_NAT-444444?style=flat-square" alt="DNS &amp; NAT"/></td>
+</tr>
+<tr>
+<td><b>🐧 Linux &amp; self-hosting</b></td>
+<td><img src="https://img.shields.io/badge/Proxmox-E57000?style=flat-square&logo=proxmox&logoColor=white" alt="Proxmox"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes"/> <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx"/> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu"/> <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash"/></td>
+</tr>
+<tr>
+<td><b>⚙️ Automation &amp; code</b></td>
+<td><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/> <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/></td>
+</tr>
+<tr>
+<td><b>☁️ Learning now</b></td>
+<td><img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Azure"/> <img src="https://img.shields.io/badge/DevOps-444444?style=flat-square&logo=azuredevops&logoColor=white" alt="DevOps"/></td>
 </tr>
 </table>
 
-<br/>
-
-<img src="https://skillicons.dev/icons?i=windows,linux,ubuntu,azure,powershell,bash,vscode,git&perline=8&theme=dark" />
-
-<br/><br/>
-
-![Active Directory](https://img.shields.io/badge/Active_Directory-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![SCCM](https://img.shields.io/badge/SCCM/MECM-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
-![pfSense](https://img.shields.io/badge/pfSense-212121?style=for-the-badge&logo=pfsense&logoColor=white)
-![Plex](https://img.shields.io/badge/Plex-E5A00D?style=for-the-badge&logo=plex&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![UniFi](https://img.shields.io/badge/UniFi-0559C9?style=for-the-badge&logo=ubiquiti&logoColor=white)
-
-</div>
-
----
-
-<div align="center">
-
 ## 📊 GitHub Activity
 
-<img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation" />
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake.svg">
+  <img src="https://raw.githubusercontent.com/mxioi/mxioi/output/github-contribution-grid-snake-dark.svg" alt="Contribution graph being eaten by a snake">
+</picture>
 
 </div>
 
 ---
 
 <div align="center">
-
-### 💬 Let's Connect
 
 <i>Happy to talk about infrastructure, automation or homelabs. The best way to reach me is on <a href="https://www.linkedin.com/in/michael-vickers-7a30b3164/">LinkedIn</a>.</i>
 
 </div>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:58a6ff&height=120&section=footer" width="100%"/>
