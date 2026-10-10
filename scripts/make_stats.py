@@ -162,8 +162,15 @@ def stats_svg(theme, data):
     x0, x1, y0, y1 = 330, W - 26, 70, 214
     peak = max(weekly) or 1
     step = (x1 - x0) / max(len(weekly) - 1, 1)
-    pts = [(x0 + i * step, y1 - (v / peak) * (y1 - y0)) for i, v in enumerate(weekly)]
-    line = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
+    # Square-root scale so one busy week doesn't flatten the rest of the year.
+    pts = [(x0 + i * step, y1 - (v / peak) ** 0.5 * (y1 - y0)) for i, v in enumerate(weekly)]
+    line = f"M{pts[0][0]:.1f} {pts[0][1]:.1f}"
+    for i in range(1, len(pts)):  # Catmull-Rom smoothing
+        p0, p1, p2 = pts[max(i - 2, 0)], pts[i - 1], pts[i]
+        p3 = pts[min(i + 1, len(pts) - 1)]
+        c1 = (p1[0] + (p2[0] - p0[0]) / 6, min(y1, p1[1] + (p2[1] - p0[1]) / 6))
+        c2 = (p2[0] - (p3[0] - p1[0]) / 6, min(y1, p2[1] - (p3[1] - p1[1]) / 6))
+        line += f" C{c1[0]:.1f} {c1[1]:.1f} {c2[0]:.1f} {c2[1]:.1f} {p2[0]:.1f} {p2[1]:.1f}"
     area = line + f" L{x1:.1f} {y1} L{x0} {y1} Z"
     grid = "".join(f'<path d="M{x0} {y0 + k * (y1 - y0) / 3:.1f}H{x1}" stroke="{c["grid"]}"/>' for k in range(4))
     chart = (f'{grid}<path d="{area}" fill="url(#area)" class="area"/>'
