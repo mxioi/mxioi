@@ -125,7 +125,7 @@ Infrastructure planning as code, with an interactive 3D viewer on GitHub Pages
 | Project | Description | Tech |
 |:--------|:------------|:-----|
 | [SCCM Guide](https://github.com/mxioi/SCCM-Guide) | SCCM/MECM deployment guide | ![SCCM](https://img.shields.io/badge/SCCM-0078D4?style=flat-square&logo=microsoft&logoColor=white) |
-| [AD User Lookup](https://github.com/mxioi/AD-User-lookup-tool) | Find when an Active Directory user last signed in | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
+| [AD User Lookup](https://github.com/mxioi/ad-toolkit) | Find when an Active Directory user last signed in | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
 | [OneDrive Remove](https://github.com/mxioi/onedrive-remove) | Cleanly remove OneDrive from Windows | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
 | [PowerShell Guide](https://github.com/mxioi/powershell-guide-for-beginners) | PowerShell cheat sheet from my own learning | ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) |
 | [SSH Guide](https://github.com/mxioi/SSH-Guide) | SSH configuration guide | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
