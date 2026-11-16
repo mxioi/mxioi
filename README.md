@@ -86,7 +86,7 @@ Enterprise network security end to end: AD CS certificates, NPS policies and Uni
 <td width="50%" valign="top">
 
 ### 🛠️ [Fusion 360 on Linux](https://github.com/mxioi/fusion360-wine-linux)
-**Run Autodesk Fusion 360 on Linux with Wine/Bottles** · ⭐ 4
+**Run Autodesk Fusion 360 on Linux with Wine/Bottles** · ⭐ 5
 
 Debugging four separate root causes (GPU, Wayland, OAuth, OOM) and packaging the fixes into a setup script
 
